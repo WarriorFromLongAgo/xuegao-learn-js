@@ -17,18 +17,22 @@
         </div>
 
         <ul>
-            <li v-for="(item,index) in list">
-                {{item}}
-                <button @click="del(index)">删除</button>
-            </li>
+            <todo-item></todo-item>
         </ul>
     </div>
 
 </body>
 
 <script>
+    var TodoItem = {
+        template: '<li>item</li>'
+    }
+
     new Vue({
         el: '#root',
+        components: {
+            "todo-item": TodoItem
+        },
         data: {
             inputValue: 'hello',
             list: [1, 2, 3]
