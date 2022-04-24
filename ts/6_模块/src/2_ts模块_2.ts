@@ -1,5 +1,6 @@
 import helloWorld2 from "./2_ts模块";
-import { pi, phi, absolute } from "./2_ts模块";
+import { pi, phi } from "./2_ts模块";
+import { absolute } from "./2_ts模块";
 // import { pi as π } from "./2_ts模块";
 import RandomNumberGenerator, { pi as π } from "./2_ts模块";
 
