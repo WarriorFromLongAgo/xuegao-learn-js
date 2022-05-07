@@ -23,6 +23,11 @@ const routes: Array<RouteRecordRaw> = [
         name: 'testVuex2',
         component: () => import('../views/test/MyVuex2.vue')
     },
+    {
+        path: '/testVuex3',
+        name: 'testVuex3',
+        component: () => import('../views/test/MyVuex3.vue')
+    },
     // ]
 ]
 
