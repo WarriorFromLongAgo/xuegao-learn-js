@@ -11,11 +11,20 @@ const router = new VueRouter({
             path: '/',
             name: 'home',
             component: Home,
+            // 路由配置里有个属性叫 meta，它的数据结构是一个对象。你可以放一些key-value进去，方便在钩子函数执行的时候用。
+            // requiresAuth标志位 也是自己加的
+            // 然后在 全局钩子函数 beforeEach中去校验目标页面是否需要登录。
+            meta: { requiresAuth: true }
             // 路由独享钩子函数
             // beforeEnter: (to, from, next) => {
             // }
         }
-    ]
+    ],
+    // 在利用vue-router去做跳转的时候，到了新页面如果对页面的滚动条位置有要求的话，可以利用下面这个方法。
+    // 如果有描点，则滚动到描点。
+    // scrollBehavior(to, from, savedPosition) {
+    //     // return 期望滚动到哪个的位置
+    // }
 });
 
 // router.beforeEach((to, from, next) => {
