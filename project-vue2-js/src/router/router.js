@@ -1,16 +1,23 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../view/Home.vue'
+import xuegaoLogin from '../view/xuegaoLogin.vue'
+import xuegaoIndex from '../view/xuegaoIndex.vue'
 
 Vue.use(VueRouter)
+
 const router = new VueRouter({
-    mode: 'history',
-    base: __dirname,
+    // mode: 'history',
+    // base: __dirname,
     routers: [
         {
             path: '/',
-            name: 'home',
-            component: Home,
+            name: 'xuegaoIndex',
+            component: xuegaoIndex,
+        },
+        {
+            path: '/xuegaoLogin',
+            name: 'xuegaoLogin',
+            component: xuegaoLogin,
             // 路由配置里有个属性叫 meta，它的数据结构是一个对象。你可以放一些key-value进去，方便在钩子函数执行的时候用。
             // requiresAuth标志位 也是自己加的
             // 然后在 全局钩子函数 beforeEach中去校验目标页面是否需要登录。
@@ -40,7 +47,7 @@ router.beforeEach(() => {
 //     console.log(to.path);
 // });
 router.afterEach((to) => {
-    console.log(to.path);
+    console.log(to.path, "afterEach");
 });
 
 //   作者：城南

@@ -1,12 +1,14 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router/router'
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
 
 Vue.config.productionTip = false
 
-const app = new Vue({
-  router: router,
+Vue.use(ElementUI);
+
+new Vue({
   render: h => h(App),
-})
-// app.use(VueRouter)
-app.$mount('#app')
+  router: router,
+}).$mount('#app')
