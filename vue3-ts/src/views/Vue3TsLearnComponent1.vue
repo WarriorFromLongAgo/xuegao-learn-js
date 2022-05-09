@@ -5,6 +5,7 @@
 
 <script lang="ts">
 
+// https://www.jianshu.com/p/6c3f941abaf5
 export default {
     name: 'component1Value',
     props: {
