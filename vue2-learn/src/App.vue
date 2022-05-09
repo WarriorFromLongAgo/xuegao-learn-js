@@ -1,17 +1,15 @@
 <template>
-  <!-- <div id="vue">
-    <img alt="Vue logo" src="./assets/logo.png" />
-  </div> -->
-  <router-view />
+  <div id="app">
+    <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
+    <router-view></router-view>
+  </div>
 </template>
 
-<script lang="ts">
-import { Options, Vue } from "vue-class-component";
-
-@Options({
+<script>
+export default {
+  name: "App",
   components: {},
-})
-export default class App extends Vue { }
+};
 </script>
 
 <style>
