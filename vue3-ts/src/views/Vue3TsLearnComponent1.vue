@@ -8,7 +8,8 @@
 // https://www.jianshu.com/p/6c3f941abaf5
 export default {
     name: 'component1Value',
-    props: {
+    props:
+    {
         modelValue: String
     },
     emits: ['input'],

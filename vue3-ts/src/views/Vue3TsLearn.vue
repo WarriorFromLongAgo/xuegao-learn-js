@@ -38,7 +38,8 @@ export default {
     // },
 
     name: "Vue3TsLearn",
-    setup(setupMsg: string
+    setup(
+        // setupMsg: string
         // , propsMsg: { user: string; }
         // , props: {
         //     user: {
@@ -47,7 +48,7 @@ export default {
         //     }
         // }
     ) {
-        setupMsg = "setupMsg"
+        let setupMsg = "setupMsg"
         // propsMsg.user = "propsMsgUser"
 
         onMounted(() => {

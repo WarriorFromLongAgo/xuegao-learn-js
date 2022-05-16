@@ -10,11 +10,12 @@ import { toRefs } from 'vue'
 import { toRef } from 'vue'
 
 export default {
-  props: {
-    title: String
-  },
+  // props: {
+  //   title: String
+  // },
   // setup(props: { title: string }, context: { emit: (arg0: string, arg1: any) => void }) {
-  setup(props: { title: string }
+  setup(
+    // props: { title: string }
     // , { attrs, slots, emit, expose }
   ) {
     // console.log("context, ", context)
@@ -27,14 +28,14 @@ export default {
     // 暴露公共 property (函数)
     // console.log(context.expose)
     console.log(" Vue3TsLearnComponent3 ");
-    console.log("props ,", props)
-    console.log("props.title ,", props.title)
+  //   console.log("props ,", props)
+  //   console.log("props.title ,", props.title)
 
-    const { title } = toRefs(props)
-    console.log(title.value)
+  //   const { title } = toRefs(props)
+  //   console.log(title.value)
 
-    const title2 = toRef(props, 'title')
-    console.log(title2.value)
+  //   const title2 = toRef(props, 'title')
+  //   console.log(title2.value)
   }
 }
 
