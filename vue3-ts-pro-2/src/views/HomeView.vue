@@ -2,7 +2,8 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
     <HelloWorld msg="Welcome to xuegao im" />
-    <router-link to="/login">login</router-link>
+    <router-link to="/login">login</router-link> |
+    <router-link to="/testRouter">testRouter</router-link>
   </div>
 </template>
 
