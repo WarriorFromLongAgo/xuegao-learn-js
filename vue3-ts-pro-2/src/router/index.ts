@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import LoginView from '../views/LoginView.vue'
 import TestRouter from '../views/TestRouter.vue'
 
+// 导入所有router
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
@@ -18,6 +19,11 @@ const routes: Array<RouteRecordRaw> = [
     component: TestRouter
   }
 ]
+
+// const metaRouterArr = require.context('./', true, /\.ts$/)
+// Object.keys(metaRouterArr).forEach(item => {
+	
+// });
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
