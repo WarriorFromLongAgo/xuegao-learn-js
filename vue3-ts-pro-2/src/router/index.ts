@@ -2,6 +2,7 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import LoginView from '../views/LoginView.vue'
 import TestRouter from '../views/TestRouter.vue'
+import testView from './testView'
 
 // 导入所有router
 const routes: Array<RouteRecordRaw> = [
@@ -17,13 +18,9 @@ const routes: Array<RouteRecordRaw> = [
     path: '/testRouter',
     name: 'testRouter',
     component: TestRouter
-  }
+  },
+  ...testView
 ]
-
-// const metaRouterArr = require.context('./', true, /\.ts$/)
-// Object.keys(metaRouterArr).forEach(item => {
-	
-// });
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),

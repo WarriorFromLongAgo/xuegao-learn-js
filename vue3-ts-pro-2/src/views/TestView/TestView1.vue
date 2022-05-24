@@ -8,7 +8,6 @@ import { ElMessage } from 'element-plus'
 
 export default {
   setup() {
-
     const alterMsg = (msg: string) => {
       ElMessage.warning("asaa = " + msg)
     }
