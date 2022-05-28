@@ -17,6 +17,8 @@ import { ref } from 'vue'
 export default {
   setup() {
     const alterMsg = (msg: string) => {
+      console.log("env = ", process.env.NODE_ENV);
+      console.log("env = ", process.env.VUE_APP_API_HOST);
       ElMessage.warning("asaa = " + msg)
     }
     const elLoading = () => {
