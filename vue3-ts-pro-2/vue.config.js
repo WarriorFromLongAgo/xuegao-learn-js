@@ -1,39 +1,27 @@
+// const { defineConfig } = require('@vue/cli-service')
 const { defineConfig } = require('@vue/cli-service')
+
+const apiUrl = process.env.VUE_APP_API_HOST;
+
+// module.exports = defineConfig({
 module.exports = defineConfig({
-  transpileDependencies: true
+  transpileDependencies: true,
+
+  devServer: {
+    port: 9000,
+    host: '127.0.0.1',
+    https: false,
+    open: true,
+    //反向代理配置，注意rewrite写法，开始没看文档在这里踩了坑
+    proxy: {
+      '/api': {
+        // 接口域名（你请求的第三方接口）
+        target: 'http://localhost:8000',
+        // 是否跨域 （虚拟的站点需要更管origin）
+        changeOrigin: true,
+        // 路径重置
+        pathRewrite: { '^/api': '' }
+      }
+    }
+  },
 })
-
-
-// devServer: {
-//   overlay: { // 让浏览器 overlay 同时显示警告和错误
-//     warnings: true,
-//     errors: true
-//   },
-//   host: "localhost",
-//   port: 8080, // 端口号
-//   https: false, // https:{type:Boolean}
-//   open: false, //配置后自动启动浏览器
-//   hotOnly: true, // 热更新
-//   // proxy: 'http://localhost:8080'   // 配置跨域处理,只有一个代理
-//   proxy: { //配置多个代理
-//       "/testIp": {
-//           target: "http://197.0.0.1:8088",
-//           changeOrigin: true,
-//           ws: true,//websocket支持
-//           secure: false,
-//           pathRewrite: {
-//               "^/testIp": "/"
-//           }
-//       },
-//       "/elseIp": {
-//           target: "http://197.0.0.2:8088",
-//           changeOrigin: true,
-//           //ws: true,//websocket支持
-//           secure: false,
-//           pathRewrite: {
-//               "^/elseIp": "/"
-//           }
-//       },
-//   }
-// }
-

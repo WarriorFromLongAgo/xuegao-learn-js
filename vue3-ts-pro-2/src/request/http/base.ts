@@ -8,6 +8,7 @@ switch (process.env.NODE_ENV) {
       throw new Error('apiUrl === undefined');
     }
     BASE_URL = apiUrl
+    console.log('BASE_URL ====', BASE_URL);
     break;
   // case "test":
   //   BASE_URL = "127.0.0.1:8080";
