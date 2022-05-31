@@ -1,8 +1,6 @@
 // const { defineConfig } = require('@vue/cli-service')
 const { defineConfig } = require('@vue/cli-service')
 
-const apiUrl = process.env.VUE_APP_API_HOST;
-
 // module.exports = defineConfig({
 module.exports = defineConfig({
   transpileDependencies: true,
@@ -16,7 +14,7 @@ module.exports = defineConfig({
     proxy: {
       '/api': {
         // 接口域名（你请求的第三方接口）
-        target: 'http://localhost:8000',
+        target: 'http://127.0.0.1:8000',
         // 是否跨域 （虚拟的站点需要更管origin）
         changeOrigin: true,
         // 路径重置
