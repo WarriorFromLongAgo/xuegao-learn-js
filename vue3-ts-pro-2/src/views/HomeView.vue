@@ -3,7 +3,7 @@
     <img alt="Vue logo" src="../assets/logo.png">
     <HelloWorld msg="Welcome to xuegao im" />
     <router-link to="/login">login</router-link> |
-    <router-link to="/testRouter">testRouter</router-link>
+    <router-link to="/GotoTest">GotoTest</router-link>
   </div>
 </template>
 

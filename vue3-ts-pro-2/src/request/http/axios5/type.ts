@@ -1,7 +1,7 @@
 // 返回res.data的interface
 export interface IResponse {
   code: number | string;
-  data: any;
+  data: unknown;
   msg: string;
 }
 

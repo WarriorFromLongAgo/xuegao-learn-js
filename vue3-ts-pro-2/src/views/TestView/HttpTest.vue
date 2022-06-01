@@ -12,7 +12,7 @@
   </div>
 </template>
 <script lang="ts">
-import { login, loginAsync, getTest1, postTest1 } from '@/request/http/axios5/testHttp';
+import { getTest1, postTest1 } from '@/request/http/axios5/testHttp';
 
 export default {
   setup() {

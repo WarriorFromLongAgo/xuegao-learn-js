@@ -11,13 +11,22 @@ export const postTest1 = (params: ILogin): Promise<IResponse> => {
   return axiosInstance.post('/vue/post1', params).then(res => res.data);
 };
 
+/**
+ * @description: 用户登录
+ * @params {ILogin} params
+ * @return {Promise}
+ */
+export const imLogin = (): Promise<IResponse> => {
+  console.log('imLogin ====');
+  return axiosInstance.get('/im/login').then(res => res.data);
+};
 
 /**
  * @description: 用户登录
  * @params {ILogin} params
  * @return {Promise}
  */
- export const login = (params: ILogin): Promise<IResponse> => {
+export const login = (params: ILogin): Promise<IResponse> => {
   console.log('login ====', params);
   return axiosInstance.post('/user/login', params).then(res => res.data);
 };

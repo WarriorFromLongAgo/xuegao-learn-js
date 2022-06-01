@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import LoginView from '../views/LoginView.vue'
-import TestRouter from '../views/TestRouter.vue'
+import ImMainView from '../views/ImMainView.vue'
+import GotoTest from '../views/GotoTest.vue'
 import testView from './testView'
 
 // 导入所有router
@@ -15,9 +16,13 @@ const routes: Array<RouteRecordRaw> = [
     name: 'login',
     component: LoginView
   }, {
-    path: '/testRouter',
-    name: 'testRouter',
-    component: TestRouter
+    path: '/GotoTest',
+    name: 'GotoTest',
+    component: GotoTest
+  }, {
+    path: '/ImMainView',
+    name: 'ImMainViewName',
+    component: ImMainView
   },
   ...testView
 ]

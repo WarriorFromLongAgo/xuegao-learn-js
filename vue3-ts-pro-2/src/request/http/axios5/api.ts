@@ -14,7 +14,7 @@ axiosInstance.interceptors.request.use(
     console.log("config ==", config);
     return config;
   },
-  (error: any) => {
+  (error: unknown) => {
     return Promise.reject(error);
   }
 )
