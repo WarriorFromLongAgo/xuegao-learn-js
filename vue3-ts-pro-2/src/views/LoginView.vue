@@ -75,3 +75,18 @@ export default {
 }
 
 </script>
+
+<style>
+body {
+  margin: 0;
+}
+
+.login {
+  width: 400px;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+</style>
