@@ -19,18 +19,23 @@
 </template>
 
 <script lang="ts">
-import { reactive } from 'vue'
+import { reactive, ref } from 'vue'
 import { imLogin } from '@/request/http/axios5/testHttp';
 import { useRouter } from 'vue-router'
 
 export default {
   setup() {
     const router = useRouter()
-
+    let count = ref(0)
     const form = reactive({
       username: '',
       password: '',
     })
+
+    function increment(): number {
+      count.value++
+      return count.value
+    }
 
     const onSubmit = () => {
       console.log("submit", form)
@@ -69,7 +74,7 @@ export default {
       form.password = ''
     }
     return {
-      form, onSubmit, onReset
+      form, onSubmit, onReset, increment
     }
   }
 }
