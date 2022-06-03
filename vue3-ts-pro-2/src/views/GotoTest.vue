@@ -1,4 +1,4 @@
-<template lang="">
+<template lang="html">
   <div>
     <router-link to="/testView1">testView1</router-link> | 
     <router-link to="/HttpTest">HttpTest</router-link>
