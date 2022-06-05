@@ -41,7 +41,7 @@ export default {
         } else {
           console.log("resp.data = fasle ", resp.data);
         }
-        if (resp.code === 0 && resp.msg === "" && resp.data) {
+        if (resp.code === 200) {
           console.log("登录成功");
 
           // 了解一下 router 到底是啥
