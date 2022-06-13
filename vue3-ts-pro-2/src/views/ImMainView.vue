@@ -35,7 +35,10 @@ function initWebSocket(): void {
   console.log('启动中')
   ws = new WebSocket(wsUrl);
   console.log("initWebSocket new WebSocket");
-  ws.onopen = wsOnOpen
+  ws.onopen = function wsOnOpen(ev: Event) {
+    console.log("wsOnOpen");
+    console.log("ev", ev);
+  }
   console.log("initWebSocket wsOnOpen");
   ws.onmessage = wsOnMsg
   console.log("initWebSocket wsOnMsg");
