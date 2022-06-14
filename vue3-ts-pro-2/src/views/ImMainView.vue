@@ -35,38 +35,39 @@ function initWebSocket(): void {
   console.log('启动中')
   ws = new WebSocket(wsUrl);
   console.log("initWebSocket new WebSocket");
+
   ws.onopen = function wsOnOpen(ev: Event) {
     console.log("wsOnOpen");
-    console.log("ev", ev);
+    console.log("wsOnOpen ev", ev);
+    ws.send("我们的链接已经打开了");
   }
   console.log("initWebSocket wsOnOpen");
-  ws.onmessage = wsOnMsg
+
+  ws.onmessage = function wsOnMsg(ev: MessageEvent) {
+    console.log("wsOnMsg");
+    console.log("wsOnMsg ev", ev);
+  }
   console.log("initWebSocket wsOnMsg");
-  ws.onerror = wsOnError
+
+  ws.onerror = function wsOnError(ev: Event) {
+    console.log("wsOnError");
+    console.log("wsOnError ev", ev);
+  }
   console.log("initWebSocket wsOnError");
-  ws.onclose = wsOnClose
+
+  ws.onclose = function wsOnClose(ev: CloseEvent) {
+    console.log("wsOnClose");
+    console.log("wsOnClose ev", ev);
+  }
   console.log("initWebSocket wsOnClose");
+
   console.log("ws = ", ws);
-
 }
 
-function wsOnOpen() {
-  console.log("wsOnOpen");
-}
-function wsOnMsg() {
-  console.log("wsOnMsg");
-}
-function wsOnError() {
-  console.log("wsOnError");
-}
-function wsOnClose() {
-  console.log("wsOnClose");
-}
-
-setTimeout(() => {
-  console.log("setTimeout ws.send");
-  ws.send("vue3-ts-pro-2 client send ")
-}, 3000);
+setInterval(() => {
+  console.log("心跳保活，heart beat");
+  ws.send("vue3-ts-pro-2 client send 心跳保活，heart beat")
+}, 30 * 1000);
 
 let searchValue = ref("")
 function searchMethod(): void {
