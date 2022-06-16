@@ -2,6 +2,7 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import LoginView from '../views/LoginView.vue'
 import ImMainView from '../views/ImMainView.vue'
+import VueWeChatDemo from '../views/VueWeChatDemo.vue'
 import GotoTest from '../views/GotoTest.vue'
 import testView from './testView'
 
@@ -23,6 +24,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/ImMainView',
     name: 'ImMainViewName',
     component: ImMainView
+  },
+  {
+    path: '/VueWeChatDemo',
+    name: 'VueWeChatDemoName',
+    component: VueWeChatDemo
   },
   ...testView
 ]

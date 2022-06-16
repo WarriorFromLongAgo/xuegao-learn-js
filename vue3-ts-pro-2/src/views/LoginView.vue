@@ -20,7 +20,7 @@
 
 <script lang="ts">
 import { reactive } from 'vue'
-import { imLogin } from '@/request/http/axios5/testHttp';
+// import { imLogin } from '@/request/http/axios5/testHttp';
 import { useRouter } from 'vue-router'
 
 export default {
@@ -32,22 +32,22 @@ export default {
     })
 
     function onSubmit() {
-      console.log("submit", form)
-      imLogin().then(resp => {
-        console.log("resp = ", resp);
-        // 如果值不为空，那么就是true
-        if (resp.data) {
-          console.log("resp.data = true ", resp.data);
-        } else {
-          console.log("resp.data = fasle ", resp.data);
-        }
-        if (resp.code === 200) {
-          console.log("登录成功");
+      // console.log("submit", form)
+      // imLogin().then(resp => {
+      //   console.log("resp = ", resp);
+      //   // 如果值不为空，那么就是true
+      //   if (resp.data) {
+      //     console.log("resp.data = true ", resp.data);
+      //   } else {
+      //     console.log("resp.data = fasle ", resp.data);
+      //   }
+      //   if (resp.code === 200) {
+      //     console.log("登录成功");
 
           // 了解一下 router 到底是啥
-          if (form.username === "name") {
+          if (form.username === "2") {
             router.push({
-              name: 'ImMainViewName',
+              name: 'VueWeChatDemoName',
               params: form
             })
           } else {
@@ -56,11 +56,11 @@ export default {
               query: form
             })
           }
-        } else {
-          console.log("登录失败");
-          onReset();
-        }
-      })
+        // } else {
+        //   console.log("登录失败");
+        //   onReset();
+        // }
+      // })
     }
     const onReset = () => {
       form.username = ''
