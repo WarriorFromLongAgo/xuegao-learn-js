@@ -1,5 +1,5 @@
 <template>
-  <div class="login">
+  <div class="wechat1Login">
     <div class="label"></div>
     <div class="header">
       <img id="headMenu" src="./head.jpg" class="avatar" alt="alt"/>
@@ -82,7 +82,7 @@ function handleLogin(input: { username: string, nickname: string }, inputStr = "
   opacity: 1s;
 }
 
-.login {
+.wechat1Login {
   width: 280px;
   height: 400px;
   position: absolute;
