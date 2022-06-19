@@ -1,10 +1,8 @@
 <template lang="html">
-  <div class="flex-container">
-
-  </div>
+  <router-link to="/wechat1/login">login</router-link>
 </template>
 <script lang="ts" setup>
-
+console.log("wechat1 index")
 </script>
 <style>
 </style>

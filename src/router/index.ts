@@ -4,7 +4,7 @@ import LoginView from '@/views/LoginView.vue'
 import ImMainView from '@/views/ImMainView.vue'
 import GotoTest from '@/views/GotoTest.vue'
 import testView from './testView'
-import VueWeChatDemoRouter from "@/router/VueWeChatDemo";
+import VueWeChatDemoRouter from "@/router/wechat1";
 
 // 导入所有router
 const routes: Array<RouteRecordRaw> = [

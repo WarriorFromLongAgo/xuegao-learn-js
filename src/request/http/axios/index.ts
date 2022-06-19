@@ -113,7 +113,7 @@
 //   },
 //   // 请求时长
 //   timeout: 1000 * 30,
-//   // 请求的base地址 TODO:这块以后根据不同的模块调不同的api
+//   // 请求的base地址 这块以后根据不同的模块调不同的api
 //   baseURL: process.env.VUE_APP_API_URL,
 //   //     ? "测试"
 //   //     : "正式",
@@ -214,6 +214,6 @@
 
 // 也可以直接在index.ts中设置这样就不需要base.ts
 // const instance = axios.create({
-//   // 请求的base地址 TODO:这块以后根据不同的模块调不同的api
+//   // 请求的base地址 这块以后根据不同的模块调不同的api
 //   baseURL: process.env.VUE_APP_API_URL,
 // })
