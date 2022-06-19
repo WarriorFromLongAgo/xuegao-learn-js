@@ -61,10 +61,10 @@ function login() {
       });
 }
 
-function handleLogin(input: { username: string, nickname: string, inputStr?: string }) {
+function handleLogin(input: { username: string, nickname: string }, inputStr = "input resolveStr") {
   let username = input.username;
   let nickname = input.nickname;
-  let resolveStr = input.inputStr = "input resolveStr"
+  let resolveStr = inputStr
   return new Promise((resolve, reject) => {
     resolve({username, nickname, resolveStr})
     reject(new Error('reject apiUrl === undefined'))
