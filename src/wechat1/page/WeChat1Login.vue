@@ -130,6 +130,7 @@ function handleLogin(input: { username: string, nickname: string }, inputStr = "
       width: 135px;
       padding: 4px 15px 4px 30px;
       margin-bottom: 10px;
+      border-style: none
       border-bottom: 1px solid #D6D6D6;
       font-family: inherit;
       overflow: hidden;
