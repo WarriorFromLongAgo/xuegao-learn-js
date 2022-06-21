@@ -73,13 +73,10 @@ function handleLogin(input: { username: string, nickname: string }, inputStr = "
 
 </script>
 
-<style lang="stylus" scoped>
-.fade-enter-active, .fade-leave-active {
-  transition: opacity 1s;
-}
-
-.fade-enter, .fade-leave-to {
-  opacity: 1s;
+<style lang="scss" scoped>
+//毛玻璃
+.wechat1Login {
+  filter: blur(6px);
 }
 
 .wechat1Login {
@@ -112,6 +109,9 @@ function handleLogin(input: { username: string, nickname: string }, inputStr = "
     .account {
       background-image: url('./account.svg');
 
+      //鼠标放上去之后的焦点操作
+      //&:focus 是左边和下面
+      //:focus 是下面
       &:focus {
         background-image: url('./account-choice.svg');
       }
@@ -130,7 +130,7 @@ function handleLogin(input: { username: string, nickname: string }, inputStr = "
       width: 135px;
       padding: 4px 15px 4px 30px;
       margin-bottom: 10px;
-      border-style: none
+      border-style: none;
       border-bottom: 1px solid #D6D6D6;
       font-family: inherit;
       overflow: hidden;
@@ -147,10 +147,6 @@ function handleLogin(input: { username: string, nickname: string }, inputStr = "
         // box-shadow: inset 0 1px 1px rgba(26,173,25,.075),0 0 8px rgba(26,173,25,.6)
       }
     }
-  }
-
-  .select {
-    margin-top: 5px;
   }
 
   .loginButton {
