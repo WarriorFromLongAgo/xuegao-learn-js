@@ -1,16 +1,18 @@
 <template>
-  <div class="wechat1Login">
-    <div class="label"></div>
-    <div class="header">
-      <img id="headMenu" src="./head.jpg" class="avatar" alt="alt"/>
-    </div>
-    <div class="loginInfo">
-      <input class="account" v-model="currentUser.nickname" placeholder="昵称"/>
-      <input class="account" maxlength="14" oninput="value=value.replace(/[^\w\.\s\/]/ig,'')"
-             v-model="currentUser.username" placeholder="账号"/>
-    </div>
-    <div class="loginButton" @click="login">
-      <span>登录</span>
+  <div class="backGroundDivLogin">
+    <div class="wechat1Login">
+      <div class="label"></div>
+      <div class="header">
+        <img id="headMenu" src="./head.jpg" class="avatar" alt="alt"/>
+      </div>
+      <div class="loginInfo">
+        <input class="account" v-model="currentUser.nickname" placeholder="昵称"/>
+        <input class="account" maxlength="14" oninput="value=value.replace(/[^\w\.\s\/]/ig,'')"
+               v-model="currentUser.username" placeholder="账号"/>
+      </div>
+      <div class="loginButton" @click="login">
+        <span>登录</span>
+      </div>
     </div>
   </div>
 </template>
@@ -74,9 +76,13 @@ function handleLogin(input: { username: string, nickname: string }, inputStr = "
 </script>
 
 <style lang="scss" scoped>
-//毛玻璃
-.wechat1Login {
-  filter: blur(6px);
+.backGroundDivLogin {
+  //background: url(https://images.unsplash.com/photo-1639245458760-fe97102ec94c?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYzOTg4NDkzMg&ixlib=rb-1.2.1&q=85) center / cover no-repeat;
+
+}
+
+.wechat1Login{
+  //background: url(https://images.unsplash.com/photo-1639245458760-fe97102ec94c?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYzOTg4NDkzMg&ixlib=rb-1.2.1&q=85) center / cover no-repeat;
 }
 
 .wechat1Login {
@@ -150,8 +156,7 @@ function handleLogin(input: { username: string, nickname: string }, inputStr = "
   }
 
   .loginButton {
-    margin: 0 auto;
-    margin-top: 35px;
+    margin: 35px auto 0;
     width: 180px;
     height: 40px;
     line-height: 40px;
