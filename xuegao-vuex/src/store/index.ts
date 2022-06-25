@@ -1,11 +1,24 @@
-import {createStore} from 'vuex'
+import {createStore, Store} from 'vuex'
+import {InjectionKey} from 'vue'
+
+// 为 store state 声明类型
+export interface State {
+    countState: number,
+    count: number,
+    double: number,
+    todos: [{ id: number, text: string, done: boolean }]
+}
+
+// 定义 injection key
+export const key: InjectionKey<Store<State>> = Symbol()
 
 export const SOME_MUTATION = 'SOME_MUTATION'
 
-export default createStore({
+export default createStore<State>({
     // 开启严格模式，仅需在创建 store 的时候传入 strict: true：
     strict: true,
     state: {
+        countState: 0,
         count: 0,
         double: 0.1,
         todos: [
