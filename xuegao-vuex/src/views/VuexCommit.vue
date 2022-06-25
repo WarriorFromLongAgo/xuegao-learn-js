@@ -1,17 +1,28 @@
 <template>
   <div>
     <input type="button" @click="incr">
-    <Counter></Counter>
   </div>
 </template>
 
 
 <script lang="ts" setup>
-import { mapState } from 'vuex'
-import { mapGetters } from 'vuex'
+
+// ...mapMutations([
+//   // 将 `this.increment()` 映射为 `this.$store.commit('increment')`
+//   'increment',
+//
+//   // `mapMutations` 也支持载荷：
+//   // 将 `this.incrementBy(amount)` 映射为 `this.$store.commit('incrementBy', amount)`
+//   'incrementV2',
+// ]);
+// ...mapMutations({
+//   // 将 `this.add()` 映射为 `this.$store.commit('increment')`
+//   add: 'increment'
+// })
+
 
 function incr() {
-  console.log("incr")
+  console.log("incr");
 }
 
 // 创建一个 Counter 组件
@@ -85,8 +96,6 @@ function incr() {
 //   type: 'incrementV3',
 //   amount: 10
 // })
-
-
 
 
 </script>
