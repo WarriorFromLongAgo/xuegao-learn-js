@@ -6,7 +6,7 @@ export interface State {
     countState: number,
     count: number,
     double: number,
-    todos: [{ id: number, text: string, done: boolean }]
+    todos: { id: number, text: string, done: boolean }[]
 }
 
 // 定义 injection key
